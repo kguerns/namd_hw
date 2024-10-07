@@ -24,7 +24,7 @@ structure            apoa1.psf
 parameters           par_all22_prot_lipid.xplor
 parameters           par_all22_popc.xplor
 exclude              scaled1-4
-1-4scaling           1.0
+oneFourScaling       1.0
 
 timestep             1.0
 fullElectFrequency   4
