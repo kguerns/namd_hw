@@ -20,6 +20,8 @@ PMEGridSizeX         108
 PMEGridSizeY         108
 PMEGridSizeZ         80
 
+CUDASOAintegrate on
+
 structure            apoa1.psf
 parameters           par_all22_prot_lipid.xplor
 parameters           par_all22_popc.xplor
