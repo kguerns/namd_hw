@@ -1,5 +1,5 @@
 
-CUDASOAintegrate    off
+GPUResident         off
 
 cellBasisVector1     108.8612 0.0 0.0
 cellBasisVector2     0.0 108.8612 0.0
