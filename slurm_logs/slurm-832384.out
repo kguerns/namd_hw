@@ -1,0 +1,2 @@
+FATAL ERROR: GPUresident not supported on regular multicore builds
+srun: error: node0434: task 0: Exited with exit code 1

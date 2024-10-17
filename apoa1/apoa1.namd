@@ -1,4 +1,6 @@
 
+CUDASOAintegrate    off
+
 cellBasisVector1     108.8612 0.0 0.0
 cellBasisVector2     0.0 108.8612 0.0
 cellBasisVector3     0.0 0.0 77.758
@@ -19,8 +21,6 @@ PME                  on
 PMEGridSizeX         108
 PMEGridSizeY         108
 PMEGridSizeZ         80
-
-CUDASOAintegrate on
 
 structure            apoa1.psf
 parameters           par_all22_prot_lipid.xplor

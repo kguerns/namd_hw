@@ -7,77 +7,83 @@ import glob
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import subprocess
 
-
-#import os.path
-#from os import path
-#import pandas as pd
-#import numpy as np
 
 # Gather performance results from CPU-only log files
 log_files_C = ['./logs/apoa1-1.log', './logs/apoa1-2.log', './logs/apoa1-4.log', './logs/apoa1-8.log', './logs/apoa1-16.log']
 #log_files = glob.glob('./logs/*.log', recursive=False)
-
 num_cpus_arr_C = np.array([])
 s_step_arr_C = np.array([])
+ns_day_arr_C = np.array([])
 
 for filename in log_files_C:
+    # Benchmark result
     file = open(filename, 'r')
     for line in file:
         if re.search('Benchmark', line):
-            num_cpus_C = int(line.split(' ')[3])
-            s_step_C = float(line.split(' ')[5])
-            num_cpus_arr_C = np.append(num_cpus_arr_C, np.array([num_cpus_C]))
-            s_step_arr_C = np.append(s_step_arr_C, np.array([s_step_C]))
+            num_cpus_arr_C = np.append(num_cpus_arr_C, np.array([int(line.split(' ')[3])]))
+            s_step_arr_C = np.append(s_step_arr_C, np.array([float(line.split(' ')[5])]))
+            file.close()
             break
+    # ns_per_day.py result
+    output = subprocess.run(['python3', 'ns_per_day.py', filename], stdout=subprocess.PIPE)
+    value = str(output.stdout)
+    ns_day_arr_C = np.append(ns_day_arr_C, np.array([float(value.split('\\')[0].split(':')[1].strip())]))
+
             
 # Gather performance results from single-node GPU-offload log files
 log_files_G = ['./logs/apoa1-GPU-1.log', './logs/apoa1-GPU-2.log', './logs/apoa1-GPU-4.log', './logs/apoa1-GPU-8.log', './logs/apoa1-GPU-16.log']
-#log_files = glob.glob('./logs/*.log', recursive=False)
-
 num_cpus_arr_G = np.array([])
 s_step_arr_G = np.array([])
+ns_day_arr_G = np.array([])
 
 for filename in log_files_G:
+    # Benchmark result
     file = open(filename, 'r')
     for line in file:
         if re.search('Benchmark', line):
-            num_cpus_G = int(line.split(' ')[3])
-            s_step_G = float(line.split(' ')[5])
-            num_cpus_arr_G = np.append(num_cpus_arr_G, np.array([num_cpus_G]))
-            s_step_arr_G = np.append(s_step_arr_G, np.array([s_step_G]))
+            num_cpus_arr_G = np.append(num_cpus_arr_G, np.array([int(line.split(' ')[3])]))
+            s_step_arr_G = np.append(s_step_arr_G, np.array([float(line.split(' ')[5])]))
+            file.close()
             break
+    # ns_per_day.py result
+    output = subprocess.run(['python3', 'ns_per_day.py', filename], stdout=subprocess.PIPE)
+    value = str(output.stdout)
+    ns_day_arr_G = np.append(ns_day_arr_G, np.array([float(value.split('\\')[0].split(':')[1].strip())]))
+
             
 # Gather performance results from single-node GPU-resident log files
 log_files_GR = ['./logs/apoa1-GPU-Res-1.log', './logs/apoa1-GPU-Res-2.log', './logs/apoa1-GPU-Res-4.log', './logs/apoa1-GPU-Res-8.log', './logs/apoa1-GPU-Res-16.log']
-#log_files = glob.glob('./logs/*.log', recursive=False)
-
 num_cpus_arr_GR = np.array([])
 s_step_arr_GR = np.array([])
+ns_day_arr_GR = np.array([])
 
 for filename in log_files_GR:
+    # Benchmark result
     file = open(filename, 'r')
     for line in file:
         if re.search('Benchmark', line):
-            num_cpus_GR = int(line.split(' ')[3])
-            s_step_GR = float(line.split(' ')[5])
-            num_cpus_arr_GR = np.append(num_cpus_arr_GR, np.array([num_cpus_GR]))
-            s_step_arr_GR = np.append(s_step_arr_GR, np.array([s_step_GR]))
+            num_cpus_arr_GR = np.append(num_cpus_arr_GR, np.array([int(line.split(' ')[3])]))
+            s_step_arr_GR = np.append(s_step_arr_GR, np.array([float(line.split(' ')[5])]))
+            file.close()
             break
+    # ns_per_day.py result
+    output = subprocess.run(['python3', 'ns_per_day.py', filename], stdout=subprocess.PIPE)
+    value = str(output.stdout)
+    ns_day_arr_GR = np.append(ns_day_arr_GR, np.array([float(value.split('\\')[0].split(':')[1].strip())]))
+
             
-# Hardcode results of ns_per_day.py
-ns_day_arr_C = np.array([0.0754122, 0.153103, 0.285054, 0.973057, 1.75722])
-ns_day_arr_G = np.array([7.44807, 13.4145, 20.0439, 21.5405, 18.2305])
-ns_day_arr_GR = np.array([109.116, 110.168, 110.019, 110.494, 110.493])
+# Calculate Efficiency Results
+eff_arr_C = np.divide(ns_day_arr_C, num_cpus_arr_C)
+eff_arr_C = np.divide(eff_arr_C, np.max(eff_arr_C))
 
-eff_arr_C = np.array([0.0754122/1, 0.153103/2, 0.285054/4, 0.973057/8, 1.75722/16])
-eff_arr_C = np.divide(eff_arr_C, 0.973057/8)
+eff_arr_G = np.divide(ns_day_arr_G, num_cpus_arr_G)
+eff_arr_G = np.divide(eff_arr_G, np.max(eff_arr_G))
 
-eff_arr_G = np.array([7.44807/1, 13.4145/2, 20.0439/4, 21.5405/8, 18.2305/16])
-eff_arr_G = np.divide(eff_arr_G, 7.44807/1)
+eff_arr_GR = np.divide(ns_day_arr_GR, num_cpus_arr_GR)
+eff_arr_GR = np.divide(eff_arr_GR, np.max(eff_arr_GR))
 
-eff_arr_GR = np.array([109.116/1, 110.168/2, 110.019/4, 110.494/8, 110.493/16])
-eff_arr_GR = np.divide(eff_arr_GR, 109.116/1)
             
 # Create a plot of performance results in s/step
 x1 = num_cpus_arr_C

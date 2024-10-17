@@ -4,6 +4,7 @@
 #SBATCH --nodes 1
 #SBATCH --tasks-per-node 1
 #SBATCH --cpus-per-task 16
+#SBATCH --constraint chip_manufacturer_amd,cpu_gen_genoa
 #SBATCH --mem 16gb
 #SBATCH --time 00:20:00
 

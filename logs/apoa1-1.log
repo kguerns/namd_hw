@@ -4,7 +4,7 @@ Charm++> Using recursive bisection (scheme 3) for topology aware partitions
 Converse/Charm++ Commit ID: 
 CharmLB> Load balancer assumes all CPUs are same.
 Charm++> Running on 1 hosts
-Charm++> cpu topology info is gathered in 0.004 seconds.
+Charm++> cpu topology info is gathered in 0.001 seconds.
 CharmLB> Load balancing instrumentation for communication is off.
 Info: NAMD 3.0 for Linux-x86_64-multicore
 Info: 
@@ -16,16 +16,16 @@ Info: in all publications reporting results obtained with NAMD.
 Info: 
 Info: Based on Charm++/Converse 80000 for multicore-linux-x86_64-gcc
 Info: Built Sun Jun 16 07:49:30 CDT 2024 by dhardy on athine.ks.uiuc.edu
-Info: 1 NAMD  3.0  Linux-x86_64-multicore  1    node1673.palmetto.clemson.edu  kguerns
+Info: 1 NAMD  3.0  Linux-x86_64-multicore  1    node0434.palmetto.clemson.edu  kguerns
 Info: Running on 1 processors, 1 nodes, 1 physical nodes.
 Info: CPU topology information available.
-Info: Charm++/Converse parallel runtime startup completed at 0.0817171 s
+Info: Charm++/Converse parallel runtime startup completed at 0.00229698 s
 CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
-Info: 51.2773 MB of memory in use based on /proc/self/stat
+Info: 51.6719 MB of memory in use based on /proc/self/stat
 Info: Configuration file is /home/kguerns/namd_hw/apoa1/apoa1.namd
 Info: Changed directory to /home/kguerns/namd_hw/apoa1
 TCL: Suspending until startup complete.
-Warning: Option "1-4scaling" has been deprecated. Instead use "oneFourScaling".
+Warning: Option "CUDASOAintegrate" has been deprecated. Instead use "GPUresident".
 Info: SIMULATION PARAMETERS:
 Info: TIMESTEP               1
 Info: NUMBER OF STEPS        500
@@ -103,9 +103,9 @@ Info: 0 CROSSTERM
 Info: 83 VDW
 Info: 6 VDW_PAIRS
 Info: 0 NBTHOLE_PAIRS
-Info: TIME FOR READING PSF FILE: 0.965313
+Info: TIME FOR READING PSF FILE: 0.557953
 Info: Reading pdb file apoa1.pdb
-Info: TIME FOR READING PDB FILE: 0.166941
+Info: TIME FOR READING PDB FILE: 0.0956736
 Info: 
 Info: ****************************
 Info: STRUCTURE SUMMARY:
@@ -128,20 +128,20 @@ Info: MASS DENSITY = 0.997951 g/cm^3
 Info: ATOM DENSITY = 0.100081 atoms/A^3
 Info: *****************************
 Info: 
-Info: Entering startup at 9.5978 s, 174.094 MB of memory in use
-Info: Startup phase 0 took 0.000265343 s, 174.094 MB of memory in use
+Info: Entering startup at 0.753112 s, 533.908 MB of memory in use
+Info: Startup phase 0 took 0.00012511 s, 533.908 MB of memory in use
 Info: ADDED 218698 IMPLICIT EXCLUSIONS
-Info: Startup phase 1 took 0.0654598 s, 174.094 MB of memory in use
+Info: Startup phase 1 took 0.0226485 s, 533.908 MB of memory in use
 Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
 Info: NONBONDED TABLE SIZE: 769 POINTS
 Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000325096 AT 11.9556
 Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000324844 AT 11.9556
 Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
 Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
-Info: Startup phase 2 took 0.00333253 s, 174.094 MB of memory in use
-Info: Startup phase 3 took 4.3817e-05 s, 174.094 MB of memory in use
-Info: Startup phase 4 took 0.000104818 s, 174.094 MB of memory in use
-Info: Startup phase 5 took 3.8194e-05 s, 174.094 MB of memory in use
+Info: Startup phase 2 took 0.00318234 s, 533.908 MB of memory in use
+Info: Startup phase 3 took 1.473e-05 s, 533.908 MB of memory in use
+Info: Startup phase 4 took 3.125e-05 s, 533.908 MB of memory in use
+Info: Startup phase 5 took 8.9e-06 s, 533.908 MB of memory in use
 Info: PATCH GRID IS 6 (PERIODIC) BY 6 (PERIODIC) BY 4 (PERIODIC)
 Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
 Info: REMOVING COM VELOCITY 0.00117959 0.0289175 0.0202933
@@ -151,24 +151,24 @@ Info: TORUS B SIZE 1 USING 0
 Info: TORUS C SIZE 1 USING 0
 Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
 Info: Placed 100% of base nodes on same physical node as patch
-Info: Startup phase 6 took 0.0325487 s, 174.094 MB of memory in use
+Info: Startup phase 6 took 0.0156438 s, 533.908 MB of memory in use
 Info: PME using 1 and 1 processors for FFT and reciprocal sum.
 Info: PME GRID LOCATIONS: 0
 Info: PME TRANS LOCATIONS: 0
 Info: PME USING 1 GRID NODES AND 1 TRANS NODES
 Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
-Info: Startup phase 7 took 0.00294486 s, 174.094 MB of memory in use
-Info: Startup phase 8 took 4.6676e-05 s, 174.094 MB of memory in use
-Info: Startup phase 9 took 3.2633e-05 s, 174.094 MB of memory in use
-Info: Startup phase 10 took 2.994e-05 s, 174.094 MB of memory in use
-Info: Startup phase 11 took 2.9783e-05 s, 174.094 MB of memory in use
+Info: Startup phase 7 took 0.0012604 s, 533.908 MB of memory in use
+Info: Startup phase 8 took 2.005e-05 s, 533.908 MB of memory in use
+Info: Startup phase 9 took 8.54e-06 s, 533.908 MB of memory in use
+Info: Startup phase 10 took 7.04e-06 s, 533.908 MB of memory in use
+Info: Startup phase 11 took 7.81e-06 s, 533.908 MB of memory in use
 LDB: Central LB being created...
-Info: Startup phase 12 took 0.000115589 s, 174.094 MB of memory in use
+Info: Startup phase 12 took 3.394e-05 s, 533.908 MB of memory in use
 Info: CREATING 2885 COMPUTE OBJECTS
-Info: Startup phase 13 took 0.0100758 s, 174.094 MB of memory in use
-Info: Startup phase 14 took 0.000107939 s, 174.094 MB of memory in use
-Info: Startup phase 15 took 0.000556447 s, 174.094 MB of memory in use
-Info: Finished startup at 9.71354 s, 174.094 MB of memory in use
+Info: Startup phase 13 took 0.00262622 s, 533.908 MB of memory in use
+Info: Startup phase 14 took 2.134e-05 s, 533.908 MB of memory in use
+Info: Startup phase 15 took 0.000214531 s, 533.908 MB of memory in use
+Info: Finished startup at 0.798966 s, 533.908 MB of memory in use
 
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
@@ -214,11 +214,11 @@ ENERGY:      18     23242.4117     20468.5288      5310.2673       142.6286     
 
 ENERGY:      19     18143.9400     20989.5296      5316.6991       131.8194        -346529.5494     31434.4327         0.0000         0.0000     47714.3021        -222798.8265       173.5715   -270513.1286   -223071.3650       173.5715             41.9018      -392.2661    921491.4634        41.9018      -392.2661
 
-LDB: ============= START OF LOAD BALANCING ============== 33.0163
-LDB: ============== END OF LOAD BALANCING =============== 33.0164
-LDB: =============== DONE WITH MIGRATION ================ 33.0165
-TIMING: 20  CPU: 25.236, 1.15321/step  Wall: 25.377, 1.15894/step, 0.154525 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 20  averaging 0.0745512 ns/day, 1.15894 sec/step with standard deviation 0
+LDB: ============= START OF LOAD BALANCING ============== 9.98809
+LDB: ============== END OF LOAD BALANCING =============== 9.98813
+LDB: =============== DONE WITH MIGRATION ================ 9.9882
+TIMING: 20  CPU: 9.99982, 0.453459/step  Wall: 10.0807, 0.455782/step, 0.0607709 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 20  averaging 0.189564 ns/day, 0.455782 sec/step with standard deviation 0
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:      20     17965.5059     22054.9968      5321.8173       125.9640        -348206.1515     31862.6116         0.0000         0.0000     47960.4282        -222914.8277       174.4669   -270875.2559   -223082.7602       174.4669           -133.8112      -346.5456    921491.4634      -133.8112      -346.5456
@@ -263,8 +263,8 @@ ENERGY:      38     21417.9357     19485.8051      5699.4394       190.5896     
 
 ENERGY:      39     14905.2239     21194.3324      5709.6116       192.2159        -348062.9360     30838.9350         0.0000         0.0000     52072.4157        -223150.2015       189.4251   -275222.6172   -222787.6438       189.4251          -2066.3973      -633.0730    921491.4634     -2066.3973      -633.0730
 
-TIMING: 40  CPU: 48.2864, 1.15252/step  Wall: 48.5383, 1.15806/step, 0.147975 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 40  averaging 0.0745792 ns/day, 1.1585 sec/step with standard deviation 0.00061623
+TIMING: 40  CPU: 19.0694, 0.45348/step  Wall: 19.1962, 0.455778/step, 0.0582383 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 40  averaging 0.189565 ns/day, 0.45578 sec/step with standard deviation 2.49782e-06
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:      40     18175.3606     23091.9465      5712.9374       193.7351        -348398.4382     30569.2893         0.0000         0.0000     47793.1196        -222862.0497       173.8582   -270655.1693   -222794.4432       173.8582          -3285.9427      -815.4641    921491.4634     -3285.9427      -815.4641
@@ -309,8 +309,8 @@ ENERGY:      58     19883.4031     20861.6710      5739.1627       195.2453     
 
 ENERGY:      59     19374.3743     22284.0261      5740.2029       197.5683        -341451.8752     25574.1728         0.0000         0.0000     45544.2649        -222737.2659       165.6775   -268281.5308   -222582.7232       165.6775          -3411.1336     -1378.9658    921491.4634     -3411.1336     -1378.9658
 
-TIMING: 60  CPU: 71.3107, 1.15121/step  Wall: 71.6765, 1.15691/step, 0.1414 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 60  averaging 0.0746134 ns/day, 1.15797 sec/step with standard deviation 0.00101717
+TIMING: 60  CPU: 28.1323, 0.453143/step  Wall: 28.3058, 0.455479/step, 0.0556696 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 60  averaging 0.189607 ns/day, 0.45568 sec/step with standard deviation 0.000173856
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:      60     23449.5631     23017.6822      5743.3644       198.4364        -341915.2505     25462.3566         0.0000         0.0000     41666.5933        -222377.2546       151.5716   -264043.8479   -222570.6172       151.5716          -5200.1104     -1391.6024    921491.4634     -5200.1104     -1391.6024
@@ -355,8 +355,8 @@ ENERGY:      78     17886.0019     22851.3492      5805.4285       195.2662     
 
 ENERGY:      79     18108.1443     22595.1005      5794.6681       196.2478        -338412.9955     23516.3124         0.0000         0.0000     45459.4054        -222743.1170       165.3688   -268202.5224   -222423.9070       165.3688          -2660.1325     -2353.4763    921491.4634     -2660.1325     -2353.4763
 
-TIMING: 80  CPU: 94.325, 1.15072/step  Wall: 94.8068, 1.15652/step, 0.134927 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 80  averaging 0.0746368 ns/day, 1.15761 sec/step with standard deviation 0.00110299
+TIMING: 80  CPU: 37.186, 0.452688/step  Wall: 37.4073, 0.455075/step, 0.053092 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 80  averaging 0.18967 ns/day, 0.455528 sec/step with standard deviation 0.000334201
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:      80     23193.1683     21560.0611      5781.8893       195.6591        -338486.0874     23496.1343         0.0000         0.0000     41930.4062        -222328.7690       152.5313   -264259.1752   -222421.5996       152.5313          -3928.2139     -2382.1055    921491.4634     -3928.2139     -2382.1055
@@ -401,12 +401,12 @@ ENERGY:      98     19979.7556     22958.8352      5756.3117       214.8681     
 
 ENERGY:      99     22029.8952     22024.0794      5768.5777       211.0972        -336009.8222     22159.4700         0.0000         0.0000     41425.1770        -222391.5257       150.6934   -263816.7027   -222348.0698       150.6934          -3235.8097     -2296.7687    921491.4634     -3235.8097     -2296.7687
 
-LDB: ============= START OF LOAD BALANCING ============== 125.573
-LDB: ============== END OF LOAD BALANCING =============== 125.573
-LDB: =============== DONE WITH MIGRATION ================ 125.573
-Info: Initial time: 1 CPUs 1.15722 s/step 13.3938 days/ns 174.094 MB memory
-TIMING: 100  CPU: 117.325, 1.15001/step  Wall: 117.921, 1.15572/step, 0.128413 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 100  averaging 0.0746611 ns/day, 1.15723 sec/step with standard deviation 0.00127404
+LDB: ============= START OF LOAD BALANCING ============== 46.4152
+LDB: ============== END OF LOAD BALANCING =============== 46.4152
+LDB: =============== DONE WITH MIGRATION ================ 46.4154
+Info: Initial time: 1 CPUs 0.455338 s/step 5.27012 days/ns 533.908 MB memory
+TIMING: 100  CPU: 46.2324, 0.452318/step  Wall: 46.4993, 0.454599/step, 0.050511 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 100  averaging 0.189747 ns/day, 0.455342 sec/step with standard deviation 0.00050664
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     100     23587.3021     20475.3728      5773.0376       205.1509        -335896.4615     22125.7986         0.0000         0.0000     41455.8051        -222273.9944       150.8048   -263729.7996   -222326.1719       150.8048          -2788.3919     -2294.3879    921491.4634     -2788.3919     -2294.3879
@@ -451,11 +451,11 @@ ENERGY:     118     19488.7485     20180.1710      5691.5867       220.7069     
 
 ENERGY:     119     21608.8169     19327.4368      5705.7183       220.1523        -334582.5758     21318.6505         0.0000         0.0000     43971.5398        -222430.2611       159.9564   -266401.8010   -222258.7213       159.9564          -4948.0951     -2603.4635    921491.4634     -4948.0951     -2603.4635
 
-LDB: ============= START OF LOAD BALANCING ============== 148.668
-LDB: ============== END OF LOAD BALANCING =============== 148.668
-LDB: =============== DONE WITH MIGRATION ================ 148.668
-TIMING: 120  CPU: 140.304, 1.14892/step  Wall: 141.012, 1.15456/step, 0.12187 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 120  averaging 0.0746898 ns/day, 1.15678 sec/step with standard deviation 0.00157634
+LDB: ============= START OF LOAD BALANCING ============== 55.493
+LDB: ============== END OF LOAD BALANCING =============== 55.493
+LDB: =============== DONE WITH MIGRATION ================ 55.4933
+TIMING: 120  CPU: 55.2627, 0.451516/step  Wall: 55.5761, 0.45384/step, 0.0479053 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 120  averaging 0.189852 ns/day, 0.455092 sec/step with standard deviation 0.000762655
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     120     23278.7483     18843.5008      5721.1112       217.5091        -334559.3211     21317.8984         0.0000         0.0000     42838.0030        -222342.5504       155.8329   -265180.5534   -222260.9687       155.8329          -4802.3838     -2609.8232    921491.4634     -4802.3838     -2609.8232
@@ -500,8 +500,8 @@ ENERGY:     138     21874.8524     19195.4800      5730.8549       192.8766     
 
 ENERGY:     139     22116.0296     18330.1124      5724.2506       192.4679        -333575.3351     21115.6330         0.0000         0.0000     43705.6788        -222391.1628       158.9892   -266096.8416   -222217.3481       158.9892          -4443.4106     -3015.1527    921491.4634     -4443.4106     -3015.1527
 
-TIMING: 140  CPU: 163.235, 1.14658/step  Wall: 164.054, 1.1521/step, 0.11521 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 140  averaging 0.0747331 ns/day, 1.15611 sec/step with standard deviation 0.002283
+TIMING: 140  CPU: 64.2938, 0.451552/step  Wall: 64.6548, 0.453937/step, 0.0453937 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 140  averaging 0.189921 ns/day, 0.454927 sec/step with standard deviation 0.000821817
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     140     20992.5977     17997.1577      5722.1741       192.2140        -333726.9434     21127.4058         0.0000         0.0000     45144.2512        -222551.1429       164.2224   -267695.3941   -222224.0358       164.2224          -5617.7627     -3080.3638    921491.4634     -5617.7627     -3080.3638
@@ -546,8 +546,8 @@ ENERGY:     158     21695.0846     19425.3238      5743.5667       171.3409     
 
 ENERGY:     159     21695.6536     19084.6409      5730.9315       172.1899        -333376.3994     20800.7927         0.0000         0.0000     43483.6003        -222408.5905       158.1814   -265892.1909   -222160.0962       158.1814          -1882.1012     -2660.7874    921491.4634     -1882.1012     -2660.7874
 
-TIMING: 160  CPU: 186.129, 1.1447/step  Wall: 187.063, 1.15043/step, 0.108651 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 160  averaging 0.074779 ns/day, 1.1554 sec/step with standard deviation 0.00291737
+TIMING: 160  CPU: 73.3158, 0.451104/step  Wall: 73.7229, 0.453406/step, 0.0428217 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 160  averaging 0.19 ns/day, 0.454737 sec/step with standard deviation 0.000931744
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     160     21093.2842     18859.3046      5717.0749       174.4915        -333735.9143     20833.5469         0.0000         0.0000     44515.8596        -222542.3527       161.9365   -267058.2122   -222175.6780       161.9365          -3202.8704     -2752.7603    921491.4634     -3202.8704     -2752.7603
@@ -592,8 +592,8 @@ ENERGY:     178     21917.7900     18733.9559      5737.6245       154.5770     
 
 ENERGY:     179     20058.5720     19018.0839      5738.2698       154.9022        -333648.1809     21038.3001         0.0000         0.0000     45070.9163        -222569.1367       163.9556   -267640.0530   -222127.1788       163.9556          -2805.2707     -2668.3444    921491.4634     -2805.2707     -2668.3444
 
-TIMING: 180  CPU: 208.993, 1.14316/step  Wall: 210.042, 1.14896/step, 0.10213 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 180  averaging 0.0748254 ns/day, 1.15469 sec/step with standard deviation 0.00347201
+TIMING: 180  CPU: 82.3326, 0.45084/step  Wall: 82.7858, 0.453142/step, 0.0402793 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 180  averaging 0.190074 ns/day, 0.45456 sec/step with standard deviation 0.00102091
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     180     19770.2941     19384.7963      5738.8341       156.9935        -334084.3515     21065.2914         0.0000         0.0000     45324.2214        -222643.9207       164.8771   -267968.1422   -222142.6340       164.8771          -2684.8629     -2671.3560    921491.4634     -2684.8629     -2671.3560
@@ -638,12 +638,12 @@ ENERGY:     198     21224.0061     18800.3005      5711.3574       186.3640     
 
 ENERGY:     199     20113.4047     18634.4039      5710.3429       188.2374        -334151.8575     21182.1773         0.0000         0.0000     45722.9588        -222600.3325       166.3276   -268323.2913   -222093.2745       166.3276          -5152.2284     -2691.5411    921491.4634     -5152.2284     -2691.5411
 
-LDB: ============= START OF LOAD BALANCING ============== 240.675
-LDB: ============== END OF LOAD BALANCING =============== 240.675
-LDB: =============== DONE WITH MIGRATION ================ 240.675
-Info: Initial time: 1 CPUs 1.1509 s/step 13.3206 days/ns 174.094 MB memory
-TIMING: 200  CPU: 231.845, 1.14263/step  Wall: 233.012, 1.14847/step, 0.0957055 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 200  averaging 0.0748657 ns/day, 1.15407 sec/step with standard deviation 0.0038193
+LDB: ============= START OF LOAD BALANCING ============== 91.7666
+LDB: ============== END OF LOAD BALANCING =============== 91.7666
+LDB: =============== DONE WITH MIGRATION ================ 91.7668
+Info: Initial time: 1 CPUs 0.453455 s/step 5.24832 days/ns 533.908 MB memory
+TIMING: 200  CPU: 91.3437, 0.450551/step  Wall: 91.8454, 0.45298/step, 0.0377484 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 200  averaging 0.19014 ns/day, 0.454402 sec/step with standard deviation 0.00108436
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     200     21073.6835     18595.6348      5711.8747       190.0258        -334670.2800     21209.9244         0.0000         0.0000     45319.1602        -222569.9767       164.8586   -267889.1369   -222114.5240       164.8586          -5241.8524     -2703.6812    921491.4634     -5241.8524     -2703.6812
@@ -688,8 +688,8 @@ ENERGY:     218     20165.9157     19540.0889      5761.2415       184.9927     
 
 ENERGY:     219     19429.8639     19413.3930      5754.3577       187.2447        -334778.0699     21596.8806         0.0000         0.0000     45751.9298        -222644.4002       166.4329   -268396.3301   -222073.1715       166.4329          -4457.7331     -2810.5237    921491.4634     -4457.7331     -2810.5237
 
-TIMING: 220  CPU: 254.674, 1.14144/step  Wall: 255.957, 1.14727/step, 0.089232 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 220  averaging 0.0749058 ns/day, 1.15345 sec/step with standard deviation 0.00416279
+TIMING: 220  CPU: 100.347, 0.450188/step  Wall: 100.896, 0.452514/step, 0.0351955 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 220  averaging 0.190212 ns/day, 0.45423 sec/step with standard deviation 0.00117572
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     220     21580.9143     19260.1135      5743.1672       189.1021        -335473.8423     21655.3182         0.0000         0.0000     44539.5740        -222505.6532       162.0227   -267045.2272   -222092.6286       162.0227          -5898.3511     -2876.6577    921491.4634     -5898.3511     -2876.6577
@@ -734,8 +734,8 @@ ENERGY:     238     19419.4412     19404.0882      5740.6977       175.0128     
 
 ENERGY:     239     20428.8614     19846.5438      5752.8836       173.1946        -334966.8367     21816.7506         0.0000         0.0000     44416.4635        -222532.1392       161.5749   -266948.6027   -222068.9819       161.5749          -2385.1779     -2499.0795    921491.4634     -2385.1779     -2499.0795
 
-TIMING: 240  CPU: 277.485, 1.14056/step  Wall: 278.888, 1.14657/step, 0.0828079 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 240  averaging 0.0749431 ns/day, 1.15288 sec/step with standard deviation 0.00443781
+TIMING: 240  CPU: 109.345, 0.449903/step  Wall: 109.939, 0.452161/step, 0.0326561 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 240  averaging 0.190284 ns/day, 0.454058 sec/step with standard deviation 0.00127023
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     240     22861.0419     20119.9133      5760.6910       171.4213        -335766.3614     21854.4250         0.0000         0.0000     42641.4776        -222357.3914       155.1180   -264998.8689   -222074.0947       155.1180          -3844.9084     -2568.3896    921491.4634     -3844.9084     -2568.3896
@@ -780,8 +780,8 @@ ENERGY:     258     19453.5865     18882.0665      5673.2911       193.6684     
 
 ENERGY:     259     20717.7707     18984.1029      5671.3007       192.3773        -335369.5266     21871.0063         0.0000         0.0000     45431.1555        -222501.8132       165.2661   -267932.9687   -222063.7300       165.2661          -2890.3670     -2780.4960    921491.4634     -2890.3670     -2780.4960
 
-TIMING: 260  CPU: 300.253, 1.1384/step  Wall: 301.775, 1.14431/step, 0.0762876 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 260  averaging 0.0749859 ns/day, 1.15222 sec/step with standard deviation 0.00486725
+TIMING: 260  CPU: 118.338, 0.449612/step  Wall: 118.979, 0.451998/step, 0.0301332 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 260  averaging 0.190351 ns/day, 0.453899 sec/step with standard deviation 0.00134357
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     260     22744.9542     19188.2462      5675.1875       191.0393        -336169.7717     21924.7890         0.0000         0.0000     44083.4304        -222362.1249       160.3634   -266445.5554   -222069.6806       160.3634          -3407.4793     -2810.9877    921491.4634     -3407.4793     -2810.9877
@@ -826,8 +826,8 @@ ENERGY:     278     20199.4576     19713.7760      5686.9122       183.6585     
 
 ENERGY:     279     21984.3649     19593.9432      5677.5176       184.5187        -335888.5793     22096.4194         0.0000         0.0000     43975.0881        -222376.7274       159.9693   -266351.8155   -222065.2018       159.9693          -4044.3214     -2682.8390    921491.4634     -4044.3214     -2682.8390
 
-TIMING: 280  CPU: 323.023, 1.13847/step  Wall: 324.666, 1.14459/step, 0.0699473 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 280  averaging 0.0750214 ns/day, 1.15167 sec/step with standard deviation 0.00510105
+TIMING: 280  CPU: 127.323, 0.449273/step  Wall: 128.01, 0.451561/step, 0.0275954 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 280  averaging 0.190421 ns/day, 0.453732 sec/step with standard deviation 0.00143412
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     280     22859.3230     19458.4368      5670.0026       185.3899        -336752.6624     22145.1349         0.0000         0.0000     44066.7339        -222367.6413       160.3027   -266434.3752   -222073.4241       160.3027          -4286.3895     -2748.0547    921491.4634     -4286.3895     -2748.0547
@@ -872,12 +872,12 @@ ENERGY:     298     20578.5045     19886.6666      5727.8935       178.9488     
 
 ENERGY:     299     21598.9655     20050.9662      5731.9441       180.9390        -336266.8187     22346.0651         0.0000         0.0000     43977.6319        -222380.3070       159.9785   -266357.9389   -222056.3720       159.9785          -3820.1264     -2506.2687    921491.4634     -3820.1264     -2506.2687
 
-LDB: ============= START OF LOAD BALANCING ============== 355.193
-LDB: ============== END OF LOAD BALANCING =============== 355.193
-LDB: =============== DONE WITH MIGRATION ================ 355.193
-Info: Initial time: 1 CPUs 1.145 s/step 13.2523 days/ns 174.094 MB memory
-TIMING: 300  CPU: 345.755, 1.13661/step  Wall: 347.512, 1.14227/step, 0.0634595 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 300  averaging 0.0750622 ns/day, 1.15105 sec/step with standard deviation 0.00548217
+LDB: ============= START OF LOAD BALANCING ============== 136.966
+LDB: ============== END OF LOAD BALANCING =============== 136.966
+LDB: =============== DONE WITH MIGRATION ================ 136.966
+Info: Initial time: 1 CPUs 0.451934 s/step 5.23072 days/ns 533.908 MB memory
+TIMING: 300  CPU: 136.307, 0.449183/step  Wall: 137.039, 0.451451/step, 0.0250806 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 300  averaging 0.190485 ns/day, 0.45358 sec/step with standard deviation 0.00150223
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     300     21869.9881     20174.1890      5731.6695       182.6816        -337209.9015     22385.4773         0.0000         0.0000     44423.7994        -222442.0966       161.6016   -266865.8960   -222076.5862       161.6016          -4600.9409     -2563.6019    921491.4634     -4600.9409     -2563.6019
@@ -922,8 +922,8 @@ ENERGY:     318     21109.3875     19471.3044      5677.4840       178.9393     
 
 ENERGY:     319     21567.4384     19787.0343      5681.4413       178.7485        -336801.6055     22496.5467         0.0000         0.0000     44691.1809        -222399.2154       162.5742   -267090.3963   -222051.9242       162.5742          -2725.8798     -2457.2026    921491.4634     -2725.8798     -2457.2026
 
-TIMING: 320  CPU: 368.485, 1.13648/step  Wall: 370.355, 1.14216/step, 0.0571082 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 320  averaging 0.0750984 ns/day, 1.15049 sec/step with standard deviation 0.00574294
+TIMING: 320  CPU: 145.281, 0.448718/step  Wall: 146.06, 0.451023/step, 0.0225511 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 320  averaging 0.190552 ns/day, 0.45342 sec/step with standard deviation 0.00158589
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     320     21393.3835     20196.2690      5687.3971       178.9168        -337738.1148     22532.5468         0.0000         0.0000     45250.4879        -222499.1138       164.6088   -267749.6017   -222076.2065       164.6088          -3895.6021     -2553.5003    921491.4634     -3895.6021     -2553.5003
@@ -968,8 +968,8 @@ ENERGY:     338     21007.5747     19722.4643      5687.5590       179.5437     
 
 ENERGY:     339     20742.6010     19892.4865      5683.2969       179.6501        -336924.5147     22593.0208         0.0000         0.0000     45359.3481        -222474.1112       165.0048   -267833.4594   -222043.8623       165.0048          -2199.9376     -2485.1216    921491.4634     -2199.9376     -2485.1216
 
-TIMING: 340  CPU: 391.194, 1.13546/step  Wall: 393.175, 1.14097/step, 0.0507099 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 340  averaging 0.075135 ns/day, 1.14993 sec/step with standard deviation 0.00602064
+TIMING: 340  CPU: 154.254, 0.448659/step  Wall: 155.08, 0.45103/step, 0.0200458 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 340  averaging 0.190611 ns/day, 0.45328 sec/step with standard deviation 0.00164132
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     340     20898.6066     20139.5372      5681.9995       179.9655        -337821.3670     22621.7127         0.0000         0.0000     45758.5734        -222540.9721       166.4571   -268299.5455   -222070.3949       166.4571          -2966.9709     -2503.9487    921491.4634     -2966.9709     -2503.9487
@@ -1014,8 +1014,8 @@ ENERGY:     358     20785.4067     20424.8429      5696.9833       182.1294     
 
 ENERGY:     359     20493.6441     20484.4983      5694.4425       182.1894        -337270.5916     22762.0660         0.0000         0.0000     45152.8979        -222500.8535       164.2538   -267653.7513   -222046.0997       164.2538          -3161.2179     -2593.4282    921491.4634     -3161.2179     -2593.4282
 
-TIMING: 360  CPU: 413.882, 1.13439/step  Wall: 415.975, 1.14003/step, 0.0443345 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 360  averaging 0.0751709 ns/day, 1.14938 sec/step with standard deviation 0.00628972
+TIMING: 360  CPU: 163.267, 0.45062/step  Wall: 164.138, 0.452882/step, 0.0176121 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 360  averaging 0.19062 ns/day, 0.453258 sec/step with standard deviation 0.00159507
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     360     21112.5810     20418.0332      5690.9152       182.1442        -338077.5493     22797.1670         0.0000         0.0000     45362.4570        -222514.2517       165.0162   -267876.7087   -222065.3870       165.0162          -3505.9502     -2622.8572    921491.4634     -3505.9502     -2622.8572
@@ -1060,8 +1060,8 @@ ENERGY:     378     20473.8100     20495.6595      5711.4639       183.2952     
 
 ENERGY:     379     20419.4575     20623.8791      5716.2160       183.8420        -337495.6092     22854.5148         0.0000         0.0000     45185.6423        -222512.0575       164.3729   -267697.6998   -222047.0122       164.3729          -3997.4171     -2563.3072    921491.4634     -3997.4171     -2563.3072
 
-TIMING: 380  CPU: 436.563, 1.13407/step  Wall: 438.767, 1.13959/step, 0.0379864 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 380  averaging 0.0752046 ns/day, 1.14887 sec/step with standard deviation 0.00651186
+TIMING: 380  CPU: 172.261, 0.449713/step  Wall: 173.178, 0.452008/step, 0.0150669 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 380  averaging 0.190648 ns/day, 0.453192 sec/step with standard deviation 0.00157641
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     380     21458.1129     20605.4119      5719.3306       183.8284        -338176.3451     22892.6526         0.0000         0.0000     44833.7910        -222483.2176       163.0930   -267317.0086   -222063.6474       163.0930          -4580.2701     -2564.2101    921491.4634     -4580.2701     -2564.2101
@@ -1106,12 +1106,12 @@ ENERGY:     398     19692.8116     20133.3593      5716.9814       176.0456     
 
 ENERGY:     399     20395.5107     20061.2893      5714.6368       175.4775        -337634.0288     23050.4596         0.0000         0.0000     45731.2026        -222505.4523       166.3575   -268236.6548   -222049.1594       166.3575          -3349.4387     -2564.3616    921491.4634     -3349.4387     -2564.3616
 
-LDB: ============= START OF LOAD BALANCING ============== 469.222
-LDB: ============== END OF LOAD BALANCING =============== 469.222
-LDB: =============== DONE WITH MIGRATION ================ 469.222
-Info: Benchmark time: 1 CPUs 1.14018 s/step 13.1965 days/ns 174.094 MB memory
-TIMING: 400  CPU: 459.218, 1.13272/step  Wall: 461.531, 1.13818/step, 0.0316161 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 400  averaging 0.0752396 ns/day, 1.14833 sec/step with standard deviation 0.00677363
+LDB: ============= START OF LOAD BALANCING ============== 182.117
+LDB: ============== END OF LOAD BALANCING =============== 182.117
+LDB: =============== DONE WITH MIGRATION ================ 182.117
+Info: Benchmark time: 1 CPUs 0.451468 s/step 5.22533 days/ns 533.908 MB memory
+TIMING: 400  CPU: 181.222, 0.448047/step  Wall: 182.186, 0.450422/step, 0.0125117 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 400  averaging 0.190706 ns/day, 0.453053 sec/step with standard deviation 0.00165468
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     400     21983.9557     19981.4884      5714.2278       174.7229        -338264.6732     23090.3538         0.0000         0.0000     44890.2679        -222429.6565       163.2985   -267319.9244   -222060.6826       163.2985          -4748.6073     -2656.9995    921491.4634     -4748.6073     -2656.9995
@@ -1156,8 +1156,8 @@ ENERGY:     418     20154.6648     20457.0912      5705.5848       188.6536     
 
 ENERGY:     419     20790.7632     20185.5528      5700.4811       184.6054        -337717.8752     23139.8023         0.0000         0.0000     45250.3100        -222466.3604       164.6082   -267716.6704   -222049.5941       164.6082          -1783.9421     -2336.6464    921491.4634     -1783.9421     -2336.6464
 
-TIMING: 420  CPU: 481.868, 1.13252/step  Wall: 484.292, 1.13809/step, 0.0252908 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 420  averaging 0.0752716 ns/day, 1.14784 sec/step with standard deviation 0.00697036
+TIMING: 420  CPU: 190.17, 0.447375/step  Wall: 191.179, 0.449632/step, 0.00999183 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 420  averaging 0.190775 ns/day, 0.45289 sec/step with standard deviation 0.00177718
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     420     21812.8760     19887.3915      5695.0415       180.6770        -338321.5506     23183.0573         0.0000         0.0000     45121.9775        -222440.5297       164.1414   -267562.5073   -222061.1140       164.1414          -3051.6031     -2402.9274    921491.4634     -3051.6031     -2402.9274
@@ -1202,8 +1202,8 @@ ENERGY:     438     19935.1532     20278.6100      5724.6884       179.3848     
 
 ENERGY:     439     21052.7408     20184.4300      5727.7929       183.0561        -337561.7720     23224.7491         0.0000         0.0000     44760.8206        -222428.1825       162.8276   -267189.0031   -222052.7958       162.8276          -1936.1986     -2169.8743    921491.4634     -1936.1986     -2169.8743
 
-TIMING: 440  CPU: 504.505, 1.13183/step  Wall: 507.039, 1.13735/step, 0.0189559 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 440  averaging 0.0753029 ns/day, 1.14737 sec/step with standard deviation 0.00716062
+TIMING: 440  CPU: 199.115, 0.447289/step  Wall: 200.17, 0.449572/step, 0.00749287 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 440  averaging 0.190838 ns/day, 0.45274 sec/step with standard deviation 0.00187308
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     440     22071.5685     20036.2374      5729.7527       186.7201        -338123.1807     23276.2495         0.0000         0.0000     44417.5452        -222405.1072       161.5788   -266822.6524   -222059.4766       161.5788          -2408.4610     -2197.9667    921491.4634     -2408.4610     -2197.9667
@@ -1248,8 +1248,8 @@ ENERGY:     458     20585.8439     20019.2723      5720.7061       176.6081     
 
 ENERGY:     459     20903.4950     19784.9688      5724.0022       178.1985        -337468.1641     23318.6984         0.0000         0.0000     45113.9366        -222444.8647       164.1121   -267558.8013   -222053.1405       164.1121          -3350.5831     -2341.5794    921491.4634     -3350.5831     -2341.5794
 
-TIMING: 460  CPU: 527.126, 1.13107/step  Wall: 529.772, 1.13661/step, 0.012629 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 460  averaging 0.0753336 ns/day, 1.1469 sec/step with standard deviation 0.00734691
+TIMING: 460  CPU: 208.062, 0.447331/step  Wall: 209.164, 0.449672/step, 0.00499635 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 460  averaging 0.190894 ns/day, 0.452606 sec/step with standard deviation 0.0019386
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     460     21262.6141     19597.9060      5728.0972       179.4910        -338014.3759     23341.8002         0.0000         0.0000     45423.8566        -222480.6109       165.2395   -267904.4675   -222064.6829       165.2395          -3669.8200     -2365.2410    921491.4634     -3669.8200     -2365.2410
@@ -1294,8 +1294,8 @@ ENERGY:     478     20493.4780     19974.7639      5721.0254       187.7262     
 
 ENERGY:     479     21125.3059     19793.3954      5723.3295       189.2099        -337215.5850     23156.6778         0.0000         0.0000     44802.1588        -222425.5077       162.9779   -267227.6664   -222050.5454       162.9779          -3089.8515     -2246.7916    921491.4634     -3089.8515     -2246.7916
 
-TIMING: 480  CPU: 549.731, 1.13026/step  Wall: 552.487, 1.13575/step, 0.00630973 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 480  averaging 0.0753641 ns/day, 1.14643 sec/step with standard deviation 0.00753711
+TIMING: 480  CPU: 217.005, 0.447142/step  Wall: 218.151, 0.449373/step, 0.00249652 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 480  averaging 0.190951 ns/day, 0.452472 sec/step with standard deviation 0.00200757
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     480     21624.0326     19623.1961      5725.3111       190.1901        -337854.6794     23181.5125         0.0000         0.0000     45051.6823        -222458.7548       163.8856   -267510.4371   -222064.6208       163.8856          -4077.7327     -2291.4892    921491.4634     -4077.7327     -2291.4892
@@ -1340,19 +1340,19 @@ ENERGY:     498     20182.0167     19957.1217      5718.5597       177.2604     
 
 ENERGY:     499     20158.0681     19847.7307      5722.4090       178.6361        -337058.4811     23219.2401         0.0000         0.0000     45439.2639        -222493.1333       165.2956   -267932.3971   -222047.2056       165.2956          -2020.8688     -2376.3389    921491.4634     -2020.8688     -2376.3389
 
-Info: Benchmark time: 1 CPUs 1.13519 s/step 13.1388 days/ns 174.094 MB memory
-TIMING: 500  CPU: 572.182, 1.12254/step  Wall: 575.05, 1.12818/step, 0 hours remaining, 174.093941 MB of memory in use.
-PERFORMANCE: 500  averaging 0.0754122 ns/day, 1.1457 sec/step with standard deviation 0.00823258
+Info: Benchmark time: 1 CPUs 0.448813 s/step 5.1946 days/ns 533.908 MB memory
+TIMING: 500  CPU: 225.879, 0.443721/step  Wall: 227.068, 0.445823/step, 0 hours remaining, 533.907944 MB of memory in use.
+PERFORMANCE: 500  averaging 0.191064 ns/day, 0.452206 sec/step with standard deviation 0.00237291
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:     500     20974.8938     19756.6579      5724.4523       179.8271        -337741.4178     23251.1005         0.0000         0.0000     45359.0777        -222495.4085       165.0039   -267854.4862   -222061.0903       165.0039          -3197.5168     -2425.4141    921491.4634     -3197.5168     -2425.4141
 
 WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 500
 WRITING COORDINATES TO OUTPUT FILE AT STEP 500
-The last position output (seq=-2) takes 0.001 seconds, 174.094 MB of memory in use
+The last position output (seq=-2) takes 0.000 seconds, 533.908 MB of memory in use
 WRITING VELOCITIES TO OUTPUT FILE AT STEP 500
-The last velocity output (seq=-2) takes 0.001 seconds, 174.094 MB of memory in use
+The last velocity output (seq=-2) takes 0.000 seconds, 533.908 MB of memory in use
 ====================================================
 
-WallClock: 584.779236  CPUTime: 581.729248  Memory: 174.093941 MB
+WallClock: 227.872559  CPUTime: 226.486588  Memory: 533.907944 MB
 [Partition 0][Node 0] End of program
